@@ -1,10 +1,4 @@
-
-def main():
-
-	sortNumbers()
-
-
-	return
+import unittest
 
 def sortNumbers():
 
@@ -16,5 +10,9 @@ def sortNumbers():
 
 	print("Sorted numbers:", numbers)
 
+class TestStringSort(unittest.TestCase):
+	def testSort(self):
+		self.assertEqual([1, 2, 2, 2, 3, 4, 4, 5, 6, 7, 34, 45, 123, 745], sortNumbers())
+
 if __name__ == '__main__':
-	main()
+	unittest.main()
