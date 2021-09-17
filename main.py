@@ -1,3 +1,4 @@
+import unittest
 
 def main():
 
@@ -8,13 +9,22 @@ def main():
 
 def sortString():
 
-	string = ['some', 'string','some other', 'aaaaaaaaaaa']
+	strings = ['some', 'string','some other', 'aaaaaaaaaaa']
 
-	print("Unsorted strings:", string)
+	print("Unsorted strings:", strings)
 
-	string.sort()
+	strings.sort()
 
-	print("Sorted strings:", string)
+	print("Sorted strings:", strings)
+
+	return strings
+
+class TestStringSort(unittest.TestCase):
+	def testSort(self):
+		self.assertEqual(['aaaaaaaaaaa', 'some', 'some other', 'string'], sortString())
 
 if __name__ == '__main__':
 	main()
+	unittest.main()
+
+
