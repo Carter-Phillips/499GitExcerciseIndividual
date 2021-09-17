@@ -10,9 +10,27 @@ def sortNumbers():
 
 	print("Sorted numbers:", numbers)
 
+def sortString():
+
+	strings = ['some', 'string','some other', 'aaaaaaaaaaa']
+
+	print("Unsorted strings:", strings)
+
+	strings.sort()
+
+	print("Sorted strings:", strings)
+
+	return strings
+
 class TestStringSort(unittest.TestCase):
-	def testSort(self):
+	def testSortNumbers(self):
 		self.assertEqual([1, 2, 2, 2, 3, 4, 4, 5, 6, 7, 34, 45, 123, 745], sortNumbers())
+	def testSortStrings(self):
+		self.assertEqual(['aaaaaaaaaaa', 'some', 'some other', 'string'], sortString())
+
+
 
 if __name__ == '__main__':
 	unittest.main()
+
+	
