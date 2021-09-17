@@ -10,6 +10,10 @@ def sortNumbers():
 
 	print("Sorted numbers:", numbers)
 
+	return numbers
+	#SomeComment for Git
+
+
 def sortString():
 
 	strings = ['some', 'string','some other', 'aaaaaaaaaaa']
